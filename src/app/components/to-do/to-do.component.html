@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="alert alert-primary header">
+    <h1>TODO APP</h1>
+  </div>
+  <app-add-title></app-add-title>
+  <div class="to-do-list">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between" *ngFor="let item of toDoList">
+        <Span>
+          <label class="checkContainer">
+            <input type="checkbox" (click)="checkItem(item.id)">
+            <span class="checkmark"></span>
+          </label>
+          <span class="item-title">
+            {{ item.title }}
+          </span>
+        </Span>
+        <span class="trash-can flex-row-reverse" (click)="deleteItems()"><fa-icon [icon]="trash"></fa-icon></span>
+      </li>
+    </ul>
+  </div>
+</div>
+
