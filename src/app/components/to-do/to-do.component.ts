@@ -29,12 +29,10 @@ export class ToDoComponent implements OnInit {
   checkItem(e, id: string){
     if(e.target.checked){
       this.deleteIds.push(id);
-      console.log(this.deleteIds);
     }
     else{
       let index = this.deleteIds.indexOf(id);
       this.deleteIds.splice(index, 1);
-      console.log(this.deleteIds);
     }
   }
 
